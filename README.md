@@ -7,7 +7,6 @@ You can also click or hover the abbr tag to see the explanation.
 
 Install
 
-Create a map abbr and add plugin.min.js
 
 Upload the map abbr to your tinymce/plugin directory
 
