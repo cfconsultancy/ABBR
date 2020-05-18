@@ -7,9 +7,37 @@ You can also click or hover the abbr tag to see the explanation.
 
 Install
 
-Unzip and upload the map abbr to your tinymce/plugin directory
+Create a map abbr and add plugin.min.js
+
+Upload the map abbr to your tinymce/plugin directory
 
 Now add abbr to your tinymce.init - plugins: and your toolbar
+
+Since this ABBR html tag doesn't support touch devices you can add the following css snippet to you're default css file:
+
+```
+/* abbr */
+abbr[title]:after
+{
+    content: " (" attr(title) ")";
+}
+
+@media screen and (min-width: 1025px)
+{
+    abbr[title]
+    {
+        border-bottom: 1px dashed #ADADAD;
+        cursor:help;
+    }
+
+    abbr[title]:after
+    {
+        content: "";
+    }
+}
+```
+
+Code improvements are welcome
 
 https://www.cfconsultancy.nl/free-tinymce-5-abbr-plugin.html
 
